@@ -6,7 +6,7 @@ from google import genai  # For interacting with the Google Gemini API
 
 # Set the title and a caption for the web page
 st.title("💬 Gemini Chatbot")
-st.caption("A simple and friendly chat using Google's Gemini Flash model")
+st.caption("chat menggunakan Google's Gemini Flash model")
 
 # --- 2. Sidebar for Settings ---
 
@@ -94,7 +94,7 @@ for msg in st.session_state.messages:
 
 # Create a chat input box at the bottom of the page.
 # The user's typed message will be stored in the 'prompt' variable.
-prompt = st.chat_input("Type your message here...")
+prompt = st.chat_input("Silahkan isi pesan anda disini...")
 
 # Check if the user has entered a message.
 if prompt:
