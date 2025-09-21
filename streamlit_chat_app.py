@@ -8,16 +8,13 @@ from google import genai  # For interacting with the Google Gemini API
 st.title("💬 Gemini Chatbot")
 st.caption("A simple and friendly chat using Google's Gemini Flash model")
 
-# --- 2. api key for Settings ---
-
-    google_api_key = st.secrets("AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc")
 
 # --- 3. API Key and Client Initialization ---
 
 if ("genai_client" not in st.session_state) or (getattr(st.session_state, "_last_key", None) != google_api_key):
     try:
         # If the conditions are met, create a new client.
-        st.session_state.genai_client = genai.Client(api_key=google_api_key)
+        st.session_state.genai_client = genai.Client(api_key='AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc')
         # Store the new key in session state to compare against later.
         st.session_state._last_key = google_api_key
         # Since the key changed, we must clear the old chat and message history.
