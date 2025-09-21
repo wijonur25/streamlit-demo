@@ -11,8 +11,6 @@ st.caption("A simple and friendly chat using Google's Gemini Flash model")
 
 # --- 3. API Key and Client Initialization ---
 
-if ("genai_client" not in st.session_state) or (getattr(st.session_state, "_last_key", None) != google_api_key):
-    try:
         # If the conditions are met, create a new client.
         st.session_state.genai_client = genai.Client(api_key="AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc")
         # Store the new key in session state to compare against later.
@@ -21,10 +19,6 @@ if ("genai_client" not in st.session_state) or (getattr(st.session_state, "_last
         # .pop() safely removes an item from session_state.
         st.session_state.pop("chat", None)
         st.session_state.pop("messages", None)
-    except Exception as e:
-        # If the key is invalid, show an error and stop.
-        st.error(f"Invalid API Key: {e}")
-        st.stop()
 
 
 # --- 4. Chat History Management ---
