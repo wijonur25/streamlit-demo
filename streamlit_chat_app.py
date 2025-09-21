@@ -85,7 +85,7 @@ for msg in st.session_state.messages:
 
 # Create a chat input box at the bottom of the page.
 # The user's typed message will be stored in the 'prompt' variable.
-prompt = st.chat_input("Type your message here...")
+prompt = st.chat_input("Silahkan Bertanya Disini...")
 
 # Check if the user has entered a message.
 if prompt:
