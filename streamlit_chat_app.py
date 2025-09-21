@@ -17,7 +17,7 @@ with st.sidebar:
     
     # Create a text input field for the Google AI API Key.
     # 'type="password"' hides the key as the user types it.
-    google_api_key = st.secrets("Google AI API Key", type="password")
+    google_api_key = st.text_input("Google AI API Key", type="password")
     
     # Create a button to reset the conversation.
     # 'help' provides a tooltip that appears when hovering over the button.
