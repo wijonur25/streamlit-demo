@@ -13,9 +13,9 @@ google_api_key = st.secrets("AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc", type="pas
 # --- 3. API Key and Client Initialization ---
 
         # If the conditions are met, create a new client.
-        st.session_state.genai_client = genai.client(api_key=google_api_key)
+        st.session_state.genai_client = genai.Client(api_key=google_api_key)
         # Store the new key in session state to compare against later.
-        st.session_state._last_key = google_api_key
+        st.session_state_last_key = google_api_key
         # Since the key changed, we must clear the old chat and message history.
         # .pop() safely removes an item from session_state.
         st.session_state.pop("chat", None)
