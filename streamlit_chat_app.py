@@ -12,7 +12,7 @@ st.caption("A simple and friendly chat using Google's Gemini Flash model")
 # --- 3. API Key and Client Initialization ---
 
         # If the conditions are met, create a new client.
-        st.session_state.genai_client = genai.Client(api_key='AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc')
+        st.session_state.genai_client = genai.Client(api_key=AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc)
         # Store the new key in session state to compare against later.
         #st.session_state._last_key = google_api_key
         # Since the key changed, we must clear the old chat and message history.
