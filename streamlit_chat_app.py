@@ -11,7 +11,7 @@ st.caption("A simple and friendly chat using Google's Gemini Flash model")
 # --- 2. Sidebar for Settings ---
 
 # Create a sidebar section for app settings using 'with st.sidebar:'
-
+    st.rerun()
     google_api_key = "AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc"
 
 # --- 3. API Key and Client Initialization ---
