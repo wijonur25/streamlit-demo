@@ -11,9 +11,18 @@ st.caption("A simple and friendly chat using Google's Gemini Flash model")
 # --- 2. Sidebar for Settings ---
 
 # Create a sidebar section for app settings using 'with st.sidebar:'
+with st.sidebar:
+    # Add a subheader to organize the settings
+    st.subheader("Settings")
     
+    # Create a text input field for the Google AI API Key.
+    # 'type="password"' hides the key as the user types it.
     google_api_key = "AIzaSyCiq9-aqBCaLkK5bwj6YZtQqHxhPCGz1Bc"
-    st.rerun()
+    
+    # Create a button to reset the conversation.
+    # 'help' provides a tooltip that appears when hovering over the button.
+    reset_button = st.button("Reset Conversation", help="Clear all messages and start fresh")
+
 # --- 3. API Key and Client Initialization ---
 
 # Check if the user has provided an API key.
@@ -85,7 +94,7 @@ for msg in st.session_state.messages:
 
 # Create a chat input box at the bottom of the page.
 # The user's typed message will be stored in the 'prompt' variable.
-prompt = st.chat_input("Silahkan Bertanya Disini...")
+prompt = st.chat_input("Type your message here...")
 
 # Check if the user has entered a message.
 if prompt:
